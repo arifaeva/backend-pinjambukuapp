@@ -2,7 +2,6 @@ import { Request, Response } from "express";
 import { User } from "../models/userSchema";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import { StringExpressionOperator } from "mongoose";
 
 export const authController = {
   createUser: async (req: Request, res: Response) => {
@@ -42,7 +41,9 @@ export const authController = {
       email: user.email,
     };
 
-    const token = jwt.sign(payload, process.env.JWT_SECRET!);
+    const token = jwt.sign(payload, process.env.JWT_SECRET!, {
+      expiresIn: "7d",
+    });
 
     return res.json({ user: payload, token });
   },
