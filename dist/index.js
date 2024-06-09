@@ -23,4 +23,4 @@ app.use((0, cors_1.default)({ origin: ["http://localhost:5173"] }));
 app.use("/books", bookRouter_1.bookRouter);
 app.use("/auth", authRouter_1.authRouter);
 // app.get("/", (req, res) => res.json({ message: "Hello world!" }));
-app.listen(3000);
+app.listen(5000);

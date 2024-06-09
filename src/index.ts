@@ -27,4 +27,4 @@ app.use("/auth", authRouter);
 
 // app.get("/", (req, res) => res.json({ message: "Hello world!" }));
 
-app.listen(3000);
+app.listen(5000);

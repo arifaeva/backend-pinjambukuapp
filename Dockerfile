@@ -10,6 +10,6 @@ COPY . .
 
 ENV MONGODB_URL="mongodb+srv://arifaevaixa:DRyokDZQO95JtnPp@devscaleid.diepraq.mongodb.net/bookstore?retryWrites=true&w=majority&appName=DevscaleID"
 
-EXPOSE 3000
+EXPOSE 5000
 
 CMD ["npm", "start"]
